@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "code challenge for GA teaching position",
   "main": "server.js",
-  "engines": {
-    "node": "0.12.0"
-    },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
