@@ -1,0 +1,55 @@
+body {
+	background-image: url('/images/background.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: #ddd;
+}
+
+.page {
+	overflow: auto;
+	width: 100%;
+}
+
+.results {
+	width: 50%;
+	float: left;
+}
+
+.favorites {
+	width: 50%;
+	float: right;
+}
+
+.results-table,
+.favorites-table {
+	table-layout: fixed;
+}
+
+.featured {
+	float: none;
+}
+
+h2 {
+	margin-bottom: 0;
+}
+
+th {
+	border-bottom: 1px solid #ccc;
+}
+
+.title {
+	cursor: pointer;
+}
+
+.column-one {
+	width: 80px;
+}
+
+.column-two {
+	width: 350px;
+}
+
+.column-three {
+	width: 100px;
+}

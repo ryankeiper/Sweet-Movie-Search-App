@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+	<meta charset="UTF-8">
+	<title>MovieSearch!</title>
+</head>
+<body>
+	<div class="page-title"><h1>Sweet Movie Search App</h1></div>
+	<form class="search-movies">
+		<input type="search" class="search-field"><button type="submit" class="search-button">Search</button>
+	</form>
+	<div class="page">
+
+		<div class="results">
+			<h2>Search Results</h2>
+			<table class="results-table">
+				<col class="column-one">
+		        <col class="column-two">
+		        <col class="column-three">
+				<thead>
+					<tr>
+						<th>Year</th>
+						<th>Title</th>
+						<th>Add to Favorites</th>
+					</tr>
+				</thead>
+				<tbody class="results-list">
+				</tbody>
+			</table>
+		</div>
+
+		<div class="favorites">
+			<h2>Favorites List</h2>
+			<table class="favorites-table">
+				<col class="column-one">
+		        <col class="column-two">
+		        <col class="column-three">
+				<thead>
+					<tr>
+						<th>Year</th>
+						<th>Title</th>
+						<th>Remove from List</th>
+					</tr>
+				</thead>
+				<tbody class="favorites-list">
+				</tbody>
+			</table>
+		</div>
+
+
+	</div>
+	
+	<div class="featured"></div>
+
+	<!-- Templates for building Backbone Views -->
+
+	<script type="text/template" class="movie-result-template">
+	<td><span class="year"><%= Year %></span></td>
+	<td><span class="title"><%= Title %></span></td>
+	<td><button class="favorite-button" type="button">Favorite</button></td>
+	</script>
+
+	<script type="text/template" class="favorite-template">
+	<td><span class="year"><%= obj.toJSON().Year %></span></td>
+	<td><span class="title"><%= obj.toJSON().Title %></span></td>
+	<td><button class="remove-button" type="button">Remove</button></td>
+	</script>
+
+	<script type="text/template" class="feature-template">
+	<h3><%= obj.toJSON().Title %> (<%= obj.toJSON().Year %>)</h3>
+	<p>Rated: <%= obj.toJSON().Rated %> Runtime: <%= obj.toJSON().Runtime %><p>
+	<p>Director: <%= obj.toJSON().Director %></p>
+	<p>Starring: <%= obj.toJSON().Actors %></p>
+	<p>Plot: <%= obj.toJSON().Plot %></p>
+	<img src="<%= obj.toJSON().Poster %>" alt="<%= obj.toJSON().Title %>" style="width: 200px; height: auto;">
+	</script>
+
+	<!-- End of Templates -->
+
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.0/backbone-min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
